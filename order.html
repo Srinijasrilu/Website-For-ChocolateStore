@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <title>Bertha's Deluxe Chocolates</title>
+	
+
+
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link href="css/jquery-ui.css" rel="stylesheet" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/orderScript.js"></script>
+    <script type="text/javascript" src="js/shopping_cart.js"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/allScript.js"></script>
+</head>
+<body>
+
+    <div id="heading">
+        <img src="images/chocolate_1.jpg" alt="Berthas Logo" class="logo" id="logo" />
+	<div id="cart" >
+		<img src="./images/cart.png" alt="cart icon" class="button2 pointer" />
+		<div id="cart_number" class="button2 cart_number"></div>
+	</div>
+    </div>
+
+    <div id="nav">
+	
+	<ul id="menu">
+		<li><a href="index.html"  class="nav_button">HOME</a></li>
+		<li><a href="products.html" class="nav_button">PRODUCTS</a></li>
+		<li><a href="order.html" class="nav_button">ORDER</a></li>
+		<li><a href="about.html" class="nav_button">ABOUT US</a></li>
+		<li><a href="contact.html" class="nav_button">CONTACT US</a></li>
+	</ul>
+
+
+    </div>
+
+    <div id="page_body">
+
+        <div id="top_image">
+        </div>
+	
+	<div id="content" class="clear">
+	    <div id="success" ></div>
+	    <div id="totals" ></div>
+	    <div id="items"></div>
+	    <div class="clear">&nbsp;</div>
+	</div>
+	<div id="bottom_spacer"></div>
+    </div>
+    
+    <div id="dialog-modal" class="widget-dialog-container" title="Checkout">
+	<div class="button1">
+	    <p><u>Shipping Address</u></p>
+	    <ul>
+	    <li class="checkout"><label>First Name</label><input type="text" name="first_name" size="20" maxlength="20" /></li>
+	    <li class="checkout"><label>Last Name</label><input type="text" name="last_name" size="20" maxlength="20" /></li>
+	    <li class="checkout"><label>Address</label><input type="text" name="address1" size="20" maxlength="20" /></li>
+	    	<li><label></label><input type="text" name="address2" placeholder="apt/suite/unit" size="20" maxlength="20" /></li>
+	    <li class="checkout"><label>City</label><input type="text" name="city" size="20" maxlength="20" /></li>
+	    <li class="checkout"><label>State</label><input type="text" name="state" size="2" maxlength="2" />
+	    	<label class="zip">Zip</label><input type="text" name="zip" size="5" maxlength="5" /></li>
+	    <li class="checkout"><label>Phone</label><input type="text" name="phone" size="20" maxlength="10" placeholder="optional" /></li>
+	    </ul>
+	</div>
+	
+	<div class="button2">
+	    <p><u>Billing Address</u></p>
+	    <ul>
+	    <li class="checkout"><label>First Name</label><input type="text" name="billing_first_name" size="20" maxlength="20" /></li>
+	    <li class="checkout"><label>Last Name</label><input type="text" name="billing_last_name" size="20" maxlength="20" /></li>
+	    <li class="checkout"><label>Address</label><input type="text" name="billing_address1" size="20" maxlength="20" /></li>
+	    	<li><label></label><input type="text" name="billing_address2" placeholder="apt/suite/unit" size="20" maxlength="20" /></li>
+	    <li class="checkout"><label>City</label><input type="text" name="billing_city" size="20" maxlength="20" /></li>
+	    <li class="checkout"><label>State</label><input type="text" name="billing_state" size="2" maxlength="2" />
+	    	<label class="zip">Zip</label><input type="text" name="billing_zip" size="5" maxlength="5" /></li>
+	    <li class="checkout"><label>Phone</label><input type="text" name="billing_phone" size="20" maxlength="10" placeholder="optional" /></li>
+	    <li class="checkout"><label class="same_as_shipping">Same as Shipping</label><input type="checkbox"
+	    name="same_as_shipping" /></li>
+	    </ul>
+	</div>
+	
+	<div class="clear"></div>
+	
+	<div class="button1 cc_info">
+		<ul id="menu1">
+			<li class="checkout cc_dropdown">
+				<select name="credit_cards">
+				<option value="0">Visa</option>
+				<option value="1">Mastercard</option>
+				<option value="2">Discover</option>
+				<option value="3">American Express</option>
+				</select>
+			</li>
+			<li class="checkout">
+				<label>Credit Card</label><input type="text" name="cc_number" size="18" maxlength="16" />
+				<label class="zip">Exp</label><input type="text" name="expiration1" size="2" maxlength="2" placeholder="MM" />
+				/<input type="text" name="expiration2" size="4" maxlength="4" placeholder="YYYY" />
+			</li>
+		</ul>
+	</div>
+	
+	<div class="clear"></div>
+	
+	<div id="error_line">&nbsp;</div>
+	
+	<div class="dialog_buttons_checkout">
+	    <input type="button" value="cancel" name="cancel_button">
+	    <input type="button" value="Submit Order" name="submit_order_button">
+	</div>
+    </div>
+
+</body>
+</html>
